@@ -1,0 +1,10 @@
+venv
+*.pyc
+db
+*.db
+twiliotextbus.py
+start.sh
+TextBus_CONFIG.py
+.idea
+.DS_STORE
+TODO
