@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block links %}<link rel="stylesheet" href="../static/css/navbar.css"> {% endblock %}
+{% block content %}
+    <div class="container">
+      <!-- Static navbar -->
+      <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="">TextBus</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="">Home</a></li>
+              <li><a href="/about">About</a></li>
+              <li><a href="/contact">Contact</a></li>
+            </ul>
+
+          <form action="" method="post" name="login" class="navbar-form navbar-right" role="form">
+            {{ form.hidden_tag() }}
+            <div class="form-group">
+              {{ form.email(placeholder="Email address", class="form-control") }}
+            </div>
+            <div class="form-group">
+              {{ form.password(placeholder="Password", class="form-control") }}
+            </div>
+            <button type="submit" class="btn btn-info">Sign in</button>
+            <a class="btn btn-info" href="/register" role="button">Register</a>
+          </form>
+
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <h1>Automated Bus Alerts</h1>
+        <p>TextBus lets you input your class schedule and bus stop, and sends you alerts when your bus is nearby.</p>
+        <p>
+          <a class="btn btn-lg btn-primary" href="/register" role="button">Get Started &raquo;</a>
+        </p>
+      </div>
+
+    </div> <!-- /container -->
+{% endblock %}

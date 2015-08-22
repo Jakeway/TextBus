@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block links %}<link rel="stylesheet" href="../static/css/signin.css"> {% endblock %}
+{% block content %}
+<div class="container">
+	<h3> Something went wrong. </h3>
+	<p> It seems that {{ error }}. {{ solution }}. </p>
+	<a href="./register"> Back to registration </a>
+</div>
+{% endblock %}

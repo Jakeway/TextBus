@@ -1,0 +1,14 @@
+{% extends "base_home.html" %}
+{% block _content %}
+      {% if classes %}
+        {% for class in classes %}
+          {% endfor %}
+      {% else %}
+        <div class="jumbotron">
+          <p>It seems you haven't added any classes yet.</p>
+          <p>
+            <a class="btn btn-lg btn-primary" href="/addclass" role="button">Start Adding Classes &raquo;</a>
+          </p>
+        </div>
+      {% endif %}
+{% endblock %}

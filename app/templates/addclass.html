@@ -1,0 +1,45 @@
+{% extends "base_home.html" %}
+{% block _content %}
+	<script type="text/javascript">
+        var subjects = {{ subjects|tojson|safe }};
+    </script>
+    {% from "render_field.html" import render_field %}
+	<div class="jumbotron">
+		<form action="" method="post" name="login" class="form-signin" role="form">
+        	<h3 class="form-signin-heading">Add a class</h3>
+	        {{ form.hidden_tag() }}
+		          <table class="table">
+		            <tbody>
+		              <tr>
+		                <td>{{ form.subject.label }}</td>
+		                <td>{{ form.subject(class="form-control", autocomplete="off")}}</td>
+		              </tr>
+		              <tr>
+		              	<td>{{ form.course_number.label }}</td>
+		                <td>{{ form.course_number(class="form-control")}}</td>
+		              </tr>
+		              <tr>
+		              	<td>{{ form.section.label }}</td>
+		                <td>{{ form.section(class="form-control")}}</td>
+		              </tr>
+		              <tr>
+		              	<td>{{ form.campus.label }}</td>
+		                <td>{{ form.campus(class="form-control")}}</td>
+		              </tr>
+		              <tr>
+		              	<td>{{ form.bus.label }}</td>
+		                <td>{{ form.bus(class="form-control")}}</td>
+		              </tr>
+		              <tr>
+		              	<td>{{ form.bus_stop.label }}</td>
+		                <td>{{ form.bus_stop(class="form-control")}}</td>
+		              </tr>
+		              <tr>
+		              	<td>{{ form.alert_interval.label }}</td>
+		                <td>{{ form.alert_interval(class="form-control")}}</td>
+		            </tbody>
+		          </table>
+        	<button class="btn btn-lg btn-primary btn-block" type="submit">Add</button>
+      </form>
+     </div>
+{% endblock %}
