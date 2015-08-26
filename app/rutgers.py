@@ -23,9 +23,6 @@ class Soc:
             'semester': semester,
             'level': level
         }
-        self.headers = {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.60 Safari/537.1',
-        }
 
     """ Get title of a specific course """
     def get_title(self, subject, course_number):
@@ -102,4 +99,3 @@ if __name__ == '__main__':
     meeting_info = s.get_meeting_info(sec)
     for meeting in meeting_info:
         print s.to_military_time(meeting['startTime'], meeting['pmCode'])
-

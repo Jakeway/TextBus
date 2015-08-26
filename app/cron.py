@@ -68,6 +68,3 @@ def poll():
             user = User.query_filter_by(id=course.user_id).first()
             eta = get_eta(course.bus_stop, course.bus_name)
             send_alert(course.bus_name, course.bus_name, eta, user.phone_number, course.course_title)
-
-
-
